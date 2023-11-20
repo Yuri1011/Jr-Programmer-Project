@@ -22,6 +22,7 @@ public class UIMainScene : MonoBehaviour
     protected List<Building.InventoryEntry> m_ContentBuffer = new List<Building.InventoryEntry>();
 
 
+
     private void Awake()
     {
         Instance = this;
@@ -72,5 +73,9 @@ public class UIMainScene : MonoBehaviour
             m_CurrentContent = content;
             InfoPopup.Name.text = content.GetName();
         }
+    }
+
+    public void backToMenu() {
+        SceneManager.LoadScene(0);
     }
 }
